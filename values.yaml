@@ -87,3 +87,11 @@ livenessProbe:
 
 readinessProbe:
   initialDelaySeconds: 10
+
+cronjob:
+  schedule: "0 * * * *"
+  annotations: {}
+  concurrencyPolicy: Forbid
+  failedJobsHistoryLimit: 3
+  successfulJobsHistoryLimit: 1
+  restartPolicy: OnFailure
