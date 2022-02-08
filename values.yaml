@@ -111,8 +111,8 @@ laravel:
     DB_CONNECTION: "mysql"
     DB_HOST: "database-mysql"
     DB_PORT: "3306"
-    DB_DATABASE: "app"
-    DB_USERNAME: "sail"
+    DB_DATABASE: "database"
+    DB_USERNAME: "username"
     DB_PASSWORD: "password"
 
     BROADCAST_DRIVER: "log"
