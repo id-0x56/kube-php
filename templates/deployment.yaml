@@ -47,6 +47,11 @@ spec:
             initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          envFrom:
+            - configMapRef:
+                name: {{ include "php.fullname" . }}
+            - secretRef:
+                name: {{ include "php.fullname" . }}
           lifecycle:
             postStart:
               exec:
