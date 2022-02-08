@@ -38,3 +38,8 @@ spec:
                   rm -rf /var/www/app/vendor && composer install --optimize-autoloader && composer dump-autoload
                   chmod -R 775 /var/www/app/artisan && chmod -R 777 /var/www/app/storage && find /var/www/app/storage/ -type f -name ".gitignore" -exec chmod 664 {} \;
                   /var/www/app/artisan migrate:refresh --seed
+              envFrom:
+                - configMapRef:
+                    name: {{ include "php.fullname" . }}
+                - secretRef:
+                    name: {{ include "php.fullname" . }}
