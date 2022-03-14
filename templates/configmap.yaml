@@ -24,6 +24,8 @@ data:
   CACHE_DRIVER: {{ .Values.laravel.env.CACHE_DRIVER | quote }}
   FILESYSTEM_DRIVER: {{ .Values.laravel.env.FILESYSTEM_DRIVER | quote }}
   QUEUE_CONNECTION: {{ .Values.laravel.env.QUEUE_CONNECTION | quote }}
+  SANCTUM_STATEFUL_DOMAINS: {{ .Values.laravel.env.SANCTUM_STATEFUL_DOMAINS | quote }}
+  SESSION_DOMAIN: {{ .Values.laravel.env.SESSION_DOMAIN | quote }}
   SESSION_DRIVER: {{ .Values.laravel.env.SESSION_DRIVER | quote }}
   SESSION_LIFETIME: {{ .Values.laravel.env.SESSION_LIFETIME | quote }}
   
