@@ -123,7 +123,9 @@ laravel:
     CACHE_DRIVER: "file"
     FILESYSTEM_DRIVER: "local"
     QUEUE_CONNECTION: "sync"
+    SANCTUM_STATEFUL_DOMAINS: "localhost,localhost:3000"
     SESSION_DRIVER: "file"
+    SESSION_DOMAIN: ".localhost"
     SESSION_LIFETIME: "120"
 
     REDIS_HOST: "redis"
