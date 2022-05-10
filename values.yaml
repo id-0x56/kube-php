@@ -83,14 +83,14 @@ tolerations: []
 affinity: {}
 
 livenessProbe:
-  initialDelaySeconds: 10
-  periodSeconds: 10
-  timeoutSeconds: 5
+  initialDelaySeconds: 30
+  periodSeconds: 15
+  timeoutSeconds: 10
 
 readinessProbe:
-  initialDelaySeconds: 10
-  periodSeconds: 10
-  timeoutSeconds: 5
+  initialDelaySeconds: 30
+  periodSeconds: 15
+  timeoutSeconds: 10
 
 cronjob:
   schedule: "0 * * * *"
