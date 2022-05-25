@@ -83,12 +83,12 @@ tolerations: []
 affinity: {}
 
 livenessProbe:
-  initialDelaySeconds: 30
+  initialDelaySeconds: 90
   periodSeconds: 15
   timeoutSeconds: 10
 
 readinessProbe:
-  initialDelaySeconds: 30
+  initialDelaySeconds: 90
   periodSeconds: 15
   timeoutSeconds: 10
 
