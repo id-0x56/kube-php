@@ -101,6 +101,7 @@ cronjob:
   restartPolicy: OnFailure
 
 laravel:
+  directory: "app"
   env:
     APP_NAME: "Laravel"
     APP_ENV: "local"

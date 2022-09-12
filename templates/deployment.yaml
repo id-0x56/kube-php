@@ -63,9 +63,9 @@ spec:
                   - /bin/sh
                   - -c
                   - |
-                    rm -rf /var/www/app/vendor && composer install --optimize-autoloader && composer dump-autoload
-                    chmod -R 775 /var/www/app/artisan && chmod -R 777 /var/www/app/storage && find /var/www/app/storage/ -type f -name ".gitignore" -exec chmod 664 {} \;
-                    /var/www/app/artisan migrate:refresh --seed
+                    rm -rf /var/www/{{ .Values.laravel.directory }}/vendor && composer install --optimize-autoloader && composer dump-autoload
+                    chmod -R 775 /var/www/{{ .Values.laravel.directory }}/artisan && chmod -R 777 /var/www/{{ .Values.laravel.directory }}/storage && find /var/www/{{ .Values.laravel.directory }}/storage/ -type f -name ".gitignore" -exec chmod 664 {} \;
+                    /var/www/{{ .Values.laravel.directory }}/artisan migrate:refresh --seed
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
