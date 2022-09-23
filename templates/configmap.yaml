@@ -31,3 +31,11 @@ data:
   
   REDIS_HOST: {{ .Values.laravel.env.REDIS_HOST | quote }}
   REDIS_PORT: {{ .Values.laravel.env.REDIS_PORT | quote }}
+
+  MAIL_MAILER: {{ .Values.laravel.env.MAIL_MAILER | quote }}
+  MAIL_HOST: {{ .Values.laravel.env.MAIL_HOST | quote }}
+  MAIL_PORT: {{ .Values.laravel.env.MAIL_PORT | quote }}
+  MAIL_USERNAME: {{ .Values.laravel.env.MAIL_USERNAME | quote }}
+  MAIL_ENCRYPTION: {{ .Values.laravel.env.MAIL_ENCRYPTION | quote }}
+  MAIL_FROM_ADDRESS: {{ .Values.laravel.env.MAIL_FROM_ADDRESS | quote }}
+  MAIL_FROM_NAME: {{ .Values.laravel.env.MAIL_FROM_NAME | quote }}
